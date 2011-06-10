@@ -1,0 +1,679 @@
+From: John Dubrawski [mailto:jdubrawski@asperasoft.com]
+Sent: Wednesday, March 30, 2011 4:18 PM
+To: Tim Rollenhagen
+Cc: Suman Chitturi
+Subject: Aspera SDK eval for VMDS
+
+ 
+
+
+---------------------------------------
+
+Login: tmpaprsw 
+
+Password: xebr6adj
+
+Aspera Enterprise Server
+16072-EntSrv-unlim-eval.aspera-license
+
+ 
+
+Development/SDK/API support:
+
+Suman Chitturi, Software Engineer
+(510) 849-2386 x219
+suman@asperasoft.com
+
+Aspera Developer Network Credentials:
+
+Please access our Developer Network documentation at http://developer.asperasoft.com/index.html
+
+On the main page, you will see the API organized into three sections: (1) Aspera Web Services - a web services API, (2) Fasp Manager - C++/Java/.NET library interfaces to the fasp core, and (3) Aspera Web - a Java Script interface for embedding the AsperaWeb plug-in object installed with AsperaConnect in web applications for high-speed upload or download using the aspera fasp protocol in lieu of HTTP. I will overview each here.
+
+Aspera Web Services:
+
+The Aspera web services allow third party applications to submit, manage, and monitor transfer jobs on remote computers running our software, via the asperacentral service. (Asperacentral is a service/daemon that provides these web services and is included in the Enterprise Server and Scp Point-to-Point products). For specific details, please review the overview at:
+
+http://developer.asperasoft.com/central/index.html
+
+Each transfer job initiated via the web services has a formal job definition specified in an XML schema, and passed to the Submit method the JobNET service. An example Job order is given at:
+
+http://developer.asperasoft.com/central/job/xml-example.html
+
+Once this job is submitted to Asperacentral, the application can optionally monitor and control the transfer. If it chooses to do so, it can expect a certain flow of events as outlined in the diagram on the overview page -- see "Event Diagram for a Transfer Job". Both polling-oriented ("query") and subscribe/asynchronous notification interfaces (the "observer") are provided. Please note that monitoring (query or observe) and control (rate and bandwidth policy changes) can be issued to either endpoint of the transfer -- the initiating computer or the remote computer -- by communicating with asperacentral on the endpoint.
+
+There are some example programs that start transfer jobs and implemented observers linked on the Overview page as well -- see the "Sample Programs" section. Finally, the actual WSDL files are linked within the documentation, e.g. see
+
+http://developer.asperasoft.com/central/soap/index.html
+
+Fasp Manager
+
+The Fasp manager section includes a set of APIs for common programming languages (C++, C# and Java) that allows 3rd party applications to embed the 'ascp' transfer binary (the main Aspera transfer program) in their application and to redistribute it as an embedded component.
+Fasp Manager libraries allow Aspera transfer initiation, control and management.
+
+For links to documentation and downloadable packages containing sample programs and the redistributable libraries and jars, please see:
+
+http://developer.asperasoft.com/fasp/index.html
+
+Aspera Web
+
+This last section of the API documentation is targeted at a different use case: embedding the AsperaWeb plug-in (part of "Connect") in web applications. It is the easiest part of the API to understand and implement. To get started, take a look at
+
+http://developer.asperasoft.com/web/overview.html
+
+As you walk through the documentation, review the various JavaScript API methods supported by the plug-in. The plug-in can do multi-item (file and directory list) upload and download, including with "drag and drop" support into a browser. This makes it very versatile for building "shopping cart" style download and bulk upload applications. The Faspex sending function is one example of a bulk upload implemented using this API. Clicking the "Send" button makes an AJAX call to the server side, which returns a piece of JavaScript code that dynamically launches Connect by calling an upload list method on an AsperaWeb object.
+
+
+Supporting Tools and Other OptFrom: John Dubrawski [mailto:jdubrawski@asperasoft.com]
+Sent: Wednesday, March 30, 2011 4:18 PM
+To: Tim Rollenhagen
+Cc: Suman Chitturi
+Subject: Aspera SDK eval for VMDS
+
+ 
+
+
+---------------------------------------
+
+Login: see password spreadsheet 
+
+Password: see password spreadsheet
+
+Aspera Enterprise Server
+16072-EntSrv-unlim-eval.aspera-license
+
+ 
+
+Development/SDK/API support:
+
+Suman Chitturi, Software Engineer
+(510) 849-2386 x219
+suman@asperasoft.com
+
+Aspera Developer Network Credentials:
+
+Please access our Developer Network documentation at http://developer.asperasoft.com/index.html
+
+On the main page, you will see the API organized into three sections: (1) Aspera Web Services - a web services API, (2) Fasp Manager - C++/Java/.NET library interfaces to the fasp core, and (3) Aspera Web - a Java Script interface for embedding the AsperaWeb plug-in object installed with AsperaConnect in web applications for high-speed upload or download using the aspera fasp protocol in lieu of HTTP. I will overview each here.
+
+Aspera Web Services:
+
+The Aspera web services allow third party applications to submit, manage, and monitor transfer jobs on remote computers running our software, via the asperacentral service. (Asperacentral is a service/daemon that provides these web services and is included in the Enterprise Server and Scp Point-to-Point products). For specific details, please review the overview at:
+
+http://developer.asperasoft.com/central/index.html
+
+Each transfer job initiated via the web services has a formal job definition specified in an XML schema, and passed to the Submit method the JobNET service. An example Job order is given at:
+
+http://developer.asperasoft.com/central/job/xml-example.html
+
+Once this job is submitted to Asperacentral, the application can optionally monitor and control the transfer. If it chooses to do so, it can expect a certain flow of events as outlined in the diagram on the overview page -- see "Event Diagram for a Transfer Job". Both polling-oriented ("query") and subscribe/asynchronous notification interfaces (the "observer") are provided. Please note that monitoring (query or observe) and control (rate and bandwidth policy changes) can be issued to either endpoint of the transfer -- the initiating computer or the remote computer -- by communicating with asperacentral on the endpoint.
+
+There are some example programs that start transfer jobs and implemented observers linked on the Overview page as well -- see the "Sample Programs" section. Finally, the actual WSDL files are linked within the documentation, e.g. see
+
+http://developer.asperasoft.com/central/soap/index.html
+
+Fasp Manager
+
+The Fasp manager section includes a set of APIs for common programming languages (C++, C# and Java) that allows 3rd party applications to embed the 'ascp' transfer binary (the main Aspera transfer program) in their application and to redistribute it as an embedded component.
+Fasp Manager libraries allow Aspera transfer initiation, control and management.
+
+For links to documentation and downloadable packages containing sample programs and the redistributable libraries and jars, please see:
+
+http://developer.asperasoft.com/fasp/index.html
+
+Aspera Web
+
+This last section of the API documentation is targeted at a different use case: embedding the AsperaWeb plug-in (part of "Connect") in web applications. It is the easiest part of the API to understand and implement. To get started, take a look at
+
+http://developer.asperasoft.com/web/overview.html
+
+As you walk through the documentation, review the various JavaScript API methods supported by the plug-in. The plug-in can do multi-item (file and directory list) upload and download, including with "drag and drop" support into a browser. This makes it very versatile for building "shopping cart" style download and bulk upload applications. The Faspex sending function is one example of a bulk upload implemented using this API. Clicking the "Send" button makes an AJAX call to the server side, which returns a piece of JavaScript code that dynamically launches Connect by calling an upload list method on an AsperaWeb object.
+
+
+Supporting Tools and Other Options
+
+Command Client libraries
+
+The Remote Commands client, anFrom: John Dubrawski [mailto:jdubrawski@asperasoft.com]
+Sent: Wednesday, March 30, 2011 4:18 PM
+To: Tim Rollenhagen
+Cc: Suman Chitturi
+Subject: Aspera SDK eval for VMDS
+
+ 
+
+
+---------------------------------------
+
+Login: tmpaprsw 
+
+Password: xebr6adj
+
+Aspera Enterprise Server
+16072-EntSrv-unlim-eval.aspera-license
+
+ 
+
+Development/SDK/API support:
+
+Suman Chitturi, Software Engineer
+(510) 849-2386 x219
+suman@asperasoft.com
+
+Aspera Developer Network Credentials:
+
+Please access our Developer Network documentation at http://developer.asperasoft.com/index.html
+
+On the main page, you will see the API organized into three sections: (1) Aspera Web Services - a web services API, (2) Fasp Manager - C++/Java/.NET library interfaces to the fasp core, and (3) Aspera Web - a Java Script interface for embedding the AsperaWeb plug-in object installed with AsperaConnect in web applications for high-speed upload or download using the aspera fasp protocol in lieu of HTTP. I will overview each here.
+
+Aspera Web Services:
+
+The Aspera web services allow third party applications to submit, manage, and monitor transfer jobs on remote computers running our software, via the asperacentral service. (Asperacentral is a service/daemon that provides these web services and is included in the Enterprise Server and Scp Point-to-Point products). For specific details, please review the overview at:
+From: John Dubrawski [mailto:jdubrawski@asperasoft.com]
+Sent: Wednesday, March 30, 2011 4:18 PM
+To: Tim Rollenhagen
+Cc: Suman Chitturi
+Subject: Aspera SDK eval for VMDS
+
+ 
+
+
+---------------------------------------
+
+Login: tmpaprsw 
+
+Password: xebr6adj
+
+Aspera Enterprise Server
+16072-EntSrv-unlim-eval.asperaFrom: John Dubrawski [mailto:jdubrawski@asperasoft.com]
+Sent: Wednesday, March 30, 2011 4:18 PM
+To: Tim Rollenhagen
+Cc: Suman Chitturi
+Subject: Aspera SDK eval for VMDS
+
+ 
+
+
+---------------------------------------
+
+Login: tmpaprsw 
+
+Password: xebr6adj
+
+Aspera Enterprise Server
+16072-EntSrv-unlim-eval.aspera-license
+
+ 
+
+Development/SDK/API support:
+
+Suman Chitturi, Software Engineer
+(510) 849-2386 x219
+suman@asperasoft.com
+
+Aspera Developer Network Credentials:
+
+Please access our Developer Network documentation at http://developer.asperasoft.com/index.html
+
+On the main page, you will see the API organized into three sections: (1) Aspera Web Services - a web services API, (2) Fasp Manager - C++/Java/.NET library interfaces to the fasp core, and (3) Aspera Web - a Java Script interface for embedding the AsperaWeb plug-in object installed with AsperaConnect in web applications for high-speed upload or download using the aspera fasp protocol in lieu of HTTP. I will overview each here.
+
+Aspera Web Services:
+
+The Aspera web services allow third party applications to submit, manage, and monitor transfer jobs on remote computers running our software, via the asperacentral service. (Asperacentral is a service/daemon that provides these web services and is included in the Enterprise Server and Scp Point-to-Point products). For specific details, please review the overview at:
+
+http://developer.asperasoft.com/central/index.html
+
+Each transfer job initiated via the web services has a formal job definition specified in an XML schema, and passed to the Submit method the JobNET service. An example Job order is given at:
+
+http://developer.asperasoft.com/central/job/xml-example.html
+
+Once this job is submitted to Asperacentral, the application can optionally monitor and control the transfer. If it chooses to do so, it can expect a certain flow of events as outlined in the diagram on the overview page -- see "Event Diagram for a Transfer Job". Both polling-oriented ("query") and subscribe/asynchronous notification interfaces (the "observer") are provided. Please note that monitoring (query or observe) and control (rate and bandwidth policy changes) can be issued to either endpoint of the transfer -- the initiating computer or the remote computer -- by communicating with asperacentral on the endpoint.
+
+There are some example programs that start transfer jobs and implemented observers linked on the Overview page as well -- see the "Sample Programs" section. Finally, the actual WSDL files are linked within the documentation, e.g. see
+
+http://developer.asperasoft.com/central/soap/index.html
+
+Fasp Manager
+
+The Fasp manager section includes a set of APIs for common programming languages (C++, C# and Java) that allows 3rd party applications to embed the 'ascp' transfer binary (the main Aspera transfer program) in their application and to redistribute it as an embedded component.
+Fasp Manager libraries allow Aspera transfer initiation, control and management.
+
+For links to documentation and downloadable packages containing sample programs and the redistributable libraries and jars, please see:
+
+http://developer.asperasoft.com/fasp/index.html
+
+Aspera Web
+
+This last section of the API documentation is targeted at a different use case: embedding the AsperaWeb plug-in (part of "Connect") in web applications. It is the easiest part of the API to understand and implement. To get started, take a look at
+
+http://developer.asperasoft.com/web/overview.html
+
+As you walk through the documentation, review the various JavaScript API methods supported by the plug-in. The plug-in can do multi-item (file and directory list) upload and download, including with "drag and drop" support into a browser. This makes it very versatile for building "shopping cart" style download and bulk upload applications. The Faspex sending function is one example of a bulk upload implemented using this API. Clicking the "Send" button makes an AJAX call to the server side, which returns a piece of JavaScript code that dynamically launches Connect by calling an upload list method on an AsperaWeb object.
+
+
+Supporting Tools and Other Options
+
+Command Client libraries
+
+The Remote Commands client, an embeddable client-side library/jar for executing file system operations on a remote computer. This client library allows operations like remote browsing of the file system on a Aspera server, copy/move files on the server file system, and retreiving MD5 sums for files on the server etc. This library is available at:
+
+http://developer.asperasoft.com/supporting/command-client.html
+
+Pre & Post Transfer Processing Calls
+
+For the lighter integration needs, you may want to peruse the documentation on the post-processing capability available throughout our software. This is the mechanism that automatically fires registered custom shell scripts (any) upon file and session start, stop, and error, passing in the attributes from the transfer to use within the triggered script as environment for tailoring the action. This is the mechanism that has been used by other Aspera customers to automatically move files after successful upload to a folder monitored by a transcoding software (e.g Flip Factory), or to invoke subsequent transfers to move uploaded files to another host. Documentation is available at
+
+http://developer.asperasoft.com/supporting/index.html
+
+
+Logging/Database Access
+
+Lastly, all Aspera server software logs all file and transfer session events to an SQL database if configured to do so. Usage reports are generated on the database by our Console application, or you can query it directly using standard SQL. The schema is documented at
+
+http://developer.asperasoft.com/supporting/index.html
+
+
+
+Regards,
+
+John
+
+John Dubrawski
+Sales Director, Southwest Region
+
+Aspera, Inc.
+5900 Hollis Street, Suite E
+Emeryville, CA 94608
+United States
+jdubrawski@asperasoft.com
+
+
+T +1 (310) 227-6224 
+
+Moving the world’s digital assets at maximum speed.
+any size. any distance. any network.
+Explore high-performance file transfer solutions at www.asperasoft.com
+
+
+Experience our latest innovations at NAB2011. Booth SL9620. April 11-14 in Las Vegas.
+Through April 7th, get free entry to NAB courtesy of Aspera by using VIP pass code LV0613 on the show registration page
+
+ -license
+
+ 
+
+Development/SDK/API support:
+
+Suman Chitturi, Software Engineer
+(510) 849-2386 x219
+suman@asperasoft.com
+
+Aspera Developer Network Credentials:
+
+Please access our Developer Network documentation at http://developer.asperasoft.com/index.html
+
+On the main page, you will see the API organized into three sections: (1) Aspera Web Services - a web services API, (2) Fasp Manager - C++/Java/.NET library interfaces to the fasp core, and (3) Aspera Web - a Java Script interface for embedding the AsperaWeb plug-in object installed with AsperaConnect in web applications for high-speed upload or download using the aspera fasp protocol in lieu of HTTP. I will overview each here.
+
+Aspera Web Services:
+
+The Aspera web services allow third party applications to submit, manage, and monitor transfer jobs on remote computers running our software, via the asperacentral service. (Asperacentral is a service/daemon that provides these web services and is included in the Enterprise Server and Scp Point-to-Point products). For specific details, please review the overview at:
+
+http://developer.asperasoft.com/central/index.html
+
+Each transfer job initiated via the web services has a formal job definition specified in an XML schema, and passed to the Submit method the JobNET service. An example Job order is given at:
+
+http://developer.asperasoft.com/central/job/xml-example.html
+
+Once this job is submitted to Asperacentral, the application can optionally monitor and control the transfer. If it chooses to do so, it can expect a certain flow of events as outlined in the diagram on the overview page -- see "Event Diagram for a Transfer Job". Both polling-oriented ("query") and subscribe/asynchronous notification interfaces (the "observer") are provided. Please note that monitoring (query or observe) and control (rate and bandwidth policy changes) can be issued to either endpoint of the transfer -- the initiating computer or the remote computer -- by communicating with asperacentral on the endpoint.
+
+There are some example programs that start transfer jobs and implemented observers linked on the Overview page as well -- see the "Sample Programs" section. Finally, the actual WSDL files are linked within the documentation, e.g. see
+
+http://developer.asperasoft.com/central/soap/index.html
+
+Fasp Manager
+
+The Fasp manager section includes a set of APIs for common programming languages (C++, C# and Java) that allows 3rd party applications to embed the 'ascp' transfer binary (the main Aspera transfer program) in their application and to redistribute it as an embedded component.
+Fasp Manager libraries allow Aspera transfer initiation, control and management.
+From: John Dubrawski [mailto:jdubrawski@asperasoft.com]
+Sent: Wednesday, March 30, 2011 4:18 PM
+To: Tim Rollenhagen
+Cc: Suman Chitturi
+Subject: Aspera SDK eval for VMDS
+
+ 
+
+
+---------------------------------------
+
+Login: tmpaprsw 
+
+Password: xebr6adj
+
+Aspera Enterprise Server
+16072-EntSrv-unlim-eval.aspera-license
+
+ 
+
+Development/SDK/API support:
+
+Suman Chitturi, Software Engineer
+(510) 849-2386 x219
+suman@asperasoft.com
+
+Aspera Developer Network Credentials:
+
+Please access our Developer Network documentation at http://developer.asperasoft.com/index.html
+
+On the main page, you will see the API organized into three sections: (1) Aspera Web Services - a web services API, (2) Fasp Manager - C++/Java/.NET library interfaces to the fasp core, and (3) Aspera Web - a Java Script interface for embedding the AsperaWeb plug-in object installed with AsperaConnect in web applications for high-speed upload or download using the aspera fasp protocol in lieu of HTTP. I will overview each here.
+
+Aspera Web Services:
+
+The Aspera web services allow third party applications to submit, manage, and monitor transfer jobs on remote computers running our software, via the asperacentral service. (Asperacentral is a service/daemon that provides these web services and is included in the Enterprise Server and Scp Point-to-Point products). For specific details, please review the overview at:
+
+http://developer.asperasoft.com/central/index.html
+
+Each transfer job initiated via the web services has a formal job definition specified in an XML schema, and passed to the Submit method the JobNET service. An example Job order is given at:
+
+http://developer.asperasoft.com/central/job/xml-example.html
+
+Once this job is submitted to Asperacentral, the application can optionally monitor and control the transfer. If it chooses to do so, it can expect a certain flow of events as outlined in the diagram on the overview page -- see "Event Diagram for a Transfer Job". Both polling-oriented ("query") and subscribe/asynchronous notification interfaces (the "observer") are provided. Please note that monitoring (query or observe) and control (rate and bandwidth policy changes) can be issued to either endpoint of the transfer -- the initiating computer or the remote computer -- by communicating with asperacentral on the endpoint.
+
+There are some example programs that start transfer jobs and implemented observers linked on the Overview page as well -- see the "Sample Programs" section. Finally, the actual WSDL files are linked within the documentation, e.g. see
+
+http://developer.asperasoft.com/central/soap/index.html
+
+Fasp Manager
+
+The Fasp manager section includes a set of APIs for common programming languages (C++, C# and Java) that allows 3rd party applications to embed the 'ascp' transfer binary (the main Aspera transfer program) in their application and to redistribute it as an embedded component.
+Fasp Manager libraries allow Aspera transfer initiation, control and management.
+
+For links to documentation and downloadable packages containing sample programs and the redistributable libraries and jars, please see:
+
+http://developer.asperasoft.com/fasp/index.html
+
+Aspera Web
+
+This last section of the API documentation is targeted at a different use case: embedding the AsperaWeb plug-in (part of "Connect") in web applications. It is the easiest part of the API to understand and implement. To get started, take a look at
+
+http://developer.asperasoft.com/web/overview.html
+
+As you walk through the documentation, review the various JavaScript API methods supported by the plug-in. The plug-in can do multi-item (file and directory list) upload and download, including with "drag and drop" support into a browser. This makes it very versatile for building "shopping cart" style download and bulk upload applications. The Faspex sending function is one example of a bulk upload implemented using this API. Clicking the "Send" button makes an AJAX call to the server side, which returns a piece of JavaScript code that dynamically launches Connect by calling an upload list method on an AsperaWeb object.
+
+
+Supporting Tools and Other Options
+
+Command Client libraries
+
+The Remote Commands client, an embeddable client-side library/jar for executing file system operations on a remote computer. This client library allows operations like remote browsing of the file system on a Aspera server, copy/move files on the server file system, and retreiving MD5 sums for files on the server etc. This library is available at:
+
+http://developer.asperasoft.com/supporting/command-client.html
+
+Pre & Post Transfer Processing Calls
+
+For the lighter integration needs, you may want to peruse the documentation on the post-processing capability available throughout our software. This is the mechanism that automatically fires registered custom shell scripts (any) upon file and session start, stop, and error, passing in the attributes from the transfer to use within the triggered script as environment for tailoring the action. This is the mechanism that has been used by other Aspera customers to automatically move files after successful upload to a folder monitored by a transcoding software (e.g Flip Factory), or to invoke subsequent transfers to move uploaded files to another host. Documentation is available at
+
+http://developer.asperasoft.com/supporting/index.html
+
+
+Logging/Database Access
+
+Lastly, all Aspera server software logs all file and transfer session events to an SQL database if configured to do so. Usage reports are generated on the database by our Console application, or you can query it directly using standard SQL. The schema is documented at
+
+http://developer.asperasoft.com/supporting/index.html
+
+
+
+Regards,
+
+John
+
+John Dubrawski
+Sales Director, Southwest Region
+
+Aspera, Inc.
+5900 Hollis Street, Suite E
+Emeryville, CA 94608
+United States
+jdubrawski@asperasoft.com
+
+
+T +1 (310) 227-6224 
+
+Moving the world’s digital assets at maximum speed.
+any size. any distance. any network.
+Explore high-performance file transfer solutions at www.asperasoft.com
+
+
+Experience our latest innovations at NAB2011. Booth SL9620. April 11-14 in Las Vegas.
+Through April 7th, get free entry to NAB courtesy of Aspera by using VIP pass code LV0613 on the show registration page
+
+ 
+For links to documentation and downloadable packages containing sample programs and the redistributable libraries and jars, please see:
+
+http://developer.asperasoft.com/fasp/index.html
+
+Aspera Web
+
+This last section of the API documentation is targeted at a different use case: embedding the AsperaWeb plug-in (part of "Connect") in web applications. It is the easiest part of the API to understand and implement. To get started, take a look at
+
+http://developer.asperasoft.com/web/overview.html
+
+As you walk through the documentation, review the various JavaScript API methods supported by the plug-in. The plug-in can do multi-item (file and directory list) upload and download, including with "drag and drop" support into a browser. This makes it very versatile for building "shopping cart" style download and bulk upload applications. The Faspex sending function is one example of a bulk upload implemented using this API. Clicking the "Send" button makes an AJAX call to the server side, which returns a piece of JavaScript code that dynamically launches Connect by calling an upload list method on an AsperaWeb object.
+
+
+Supporting Tools and Other Options
+
+Command Client libraries
+
+The Remote Commands client, an embeddable client-side library/jar for executing file system operations on a remote computer. This client library allows operations like remote browsing of the file system on a Aspera server, copy/move files on the server file system, and retreiving MD5 sums for files on the server etc. This library is available at:
+
+http://developer.asperasoft.com/supporting/command-client.html
+
+Pre & Post Transfer Processing Calls
+
+For the lighter integration needs, you may want to peruse the documentation on the post-processing capability available throughout our software. This is the mechanism that automatically fires registered custom shell scripts (any) upon file and session start, stop, and error, passing in the attributes from the transfer to use within the triggered script as environment for tailoring the action. This is the mechanism that has been used by other Aspera customers to automatically move files after successful upload to a folder monitored by a transcoding software (e.g Flip Factory), or to invoke subsequent transfers to move uploaded files to another host. Documentation is available at
+
+http://developer.asperasoft.com/supporting/index.html
+
+
+Logging/Database Access
+
+Lastly, all Aspera server software logs all file and transfer session events to an SQL database if configured to do so. Usage reports are generated on the database by our Console application, or you can query it directly using standard SQL. The schema is documented at
+
+http://developer.asperasoft.com/supporting/index.html
+
+
+
+Regards,
+
+John
+
+John Dubrawski
+Sales Director, Southwest Region
+
+Aspera, Inc.
+5900 Hollis Street, Suite E
+Emeryville, CA 94608
+United States
+jdubrawski@asperasoft.com
+
+
+T +1 (310) 227-6224 
+
+Moving the world’s digital assets at maximum speed.
+any size. any distance. any network.
+Explore high-performance file transfer solutions at www.asperasoft.com
+
+
+Experience our latest innovations at NAB2011. Booth SL9620. April 11-14 in Las Vegas.
+Through April 7th, get free entry to NAB courtesy of Aspera by using VIP pass code LV0613 on the show registration page
+
+ 
+http://developer.asperasoft.com/central/index.html
+
+Each transfer job initiated via the web services has a formal job definition specified in an XML schema, and passed to the Submit method the JobNET service. An example Job order is given at:
+
+http://developer.asperasoft.com/central/job/xml-example.html
+
+Once this job is submitted to Asperacentral, the application can optionally monitor and control the transfer. If it chooses to do so, it can expect a certain flow of events as outlined in the diagram on the overview page -- see "Event Diagram for a Transfer Job". Both polling-oriented ("query") and subscribe/asynchronous notification interfaces (the "observer") are provided. Please note that monitoring (query or observe) and control (rate and bandwidth policy changes) can be issued to either endpoint of the transfer -- the initiating computer or the remote computer -- by communicating with asperacentral on the endpoint.
+
+There are some example programs that start transfer jobs and implemented observers linked on the Overview page as well -- see the "Sample Programs" section. Finally, the actual WSDL files are linked within the documentation, e.g. see
+
+http://developer.asperasoft.com/central/soap/index.html
+
+Fasp Manager
+
+The Fasp manager section includes a set of APIs for common programming languages (C++, C# and Java) that allows 3rd party applications to embed the 'ascp' transfer binary (the main Aspera transfer program) in their application and to redistribute it as an embedded component.
+Fasp Manager libraries allow Aspera transfer initiation, control and management.
+
+For links to documentation and downloadable packages containing sample programs and the redistributable libraries and jars, please see:
+
+http://developer.asperasoft.com/fasp/index.html
+
+Aspera Web
+
+This last section of the API documentation is targeted at a different use case: embedding the AsperaWeb plug-in (part of "Connect") in web applications. It is the easiest part of the API to understand and implement. To get started, take a look at
+
+http://developer.asperasoft.com/web/overview.html
+
+As you walk through the documentation, review the various JavaScript API methods supported by the plug-in. The plug-in can do multi-item (file and directory list) upload and download, including with "drag and drop" support into a browser. This makes it very versatile for building "shopping cart" style download and bulk upload applications. The Faspex sending function is one example of a bulk upload implemented using this API. Clicking the "Send" button makes an AJAX call to the server side, which returns a piece of JavaScript code that dynamically launches Connect by calling an upload list method on an AsperaWeb object.
+
+
+Supporting Tools and Other Options
+
+Command Client libraries
+
+The Remote Commands client, an embeddable client-side library/jar for executing file system operations on a remote computer. This client library allows operations like remote browsing of the file system on a Aspera server, copy/move files on the server file system, and retreiving MD5 sums for files on the server etc. This library is available at:
+
+http://developer.asperasoft.com/supporting/command-client.html
+
+Pre & Post Transfer Processing Calls
+
+For the lighter integration needs, you may want to peruse the documentation on the post-processing capability available throughout our software. This is the mechanism that automatically fires registered custom shell scripts (any) upon file and session start, stop, and error, passing in the attributes from the transfer to use within the triggered script as environment for tailoring the action. This is the mechanism that has been used by other Aspera customers to automatically move files after successful upload to a folder monitored by a transcoding software (e.g Flip Factory), or to invoke subsequent transfers to move uploaded files to another host. Documentation is available at
+
+http://developer.asperasoft.com/supporting/index.html
+
+
+Logging/Database Access
+
+Lastly, all Aspera server software logs all file and transfer session events to an SQL database if configured to do so. Usage reports are generated on the database by our Console application, or you can query it directly using standard SQL. The schema is documented at
+
+http://developer.asperasoft.com/supporting/index.html
+
+
+
+Regards,
+
+John
+
+John Dubrawski
+Sales Director, Southwest Region
+
+Aspera, Inc.
+5900 Hollis Street, Suite E
+Emeryville, CA 94608
+United States
+jdubrawski@asperasoft.com
+
+
+T +1 (310) 227-6224 
+
+Moving the world’s digital assets at maximum speed.
+any size. any distance. any network.
+Explore high-performance file transfer solutions at www.asperasoft.com
+
+
+Experience our latest innovations at NAB2011. Booth SL9620. April 11-14 in Las Vegas.
+Through April 7th, get free entry to NAB courtesy of Aspera by using VIP pass code LV0613 on the show registration page
+
+  embeddable client-side library/jar for executing file system operations on a remote computer. This client library allows operations like remote browsing of the file system on a Aspera server, copy/move files on the server file system, and retreiving MD5 sums for files on the server etc. This library is available at:
+
+http://developer.asperasoft.com/supporting/command-client.html
+
+Pre & Post Transfer Processing Calls
+
+For the lighter integration needs, you may want to peruse the documentation on the post-processing capability available throughout our software. This is the mechanism that automatically fires registered custom shell scripts (any) upon file and session start, stop, and error, passing in the attributes from the transfer to use within the triggered script as environment for tailoring the action. This is the mechanism that has been used by other Aspera customers to automatically move files after successful upload to a folder monitored by a transcoding software (e.g Flip Factory), or to invoke subsequent transfers to move uploaded files to another host. Documentation is available at
+
+http://developer.asperasoft.com/supporting/index.html
+
+
+Logging/Database Access
+
+Lastly, all Aspera server software logs all file and transfer session events to an SQL database if configured to do so. Usage reports are generated on the database by our Console application, or you can query it directly using standard SQL. The schema is documented at
+
+http://developer.asperasoft.com/supporting/index.html
+
+
+
+Regards,
+
+John
+
+John Dubrawski
+Sales Director, Southwest Region
+
+Aspera, Inc.
+5900 Hollis Street, Suite E
+Emeryville, CA 94608
+United States
+jdubrawski@asperasoft.com
+
+
+T +1 (310) 227-6224 
+
+Moving the world’s digital assets at maximum speed.
+any size. any distance. any network.
+Explore high-performance file transfer solutions at www.asperasoft.com
+
+
+Experience our latest innovations at NAB2011. Booth SL9620. April 11-14 in Las Vegas.
+Through April 7th, get free entry to NAB courtesy of Aspera by using VIP pass code LV0613 on the show registration page
+
+ ions
+
+Command Client libraries
+
+The Remote Commands client, an embeddable client-side library/jar for executing file system operations on a remote computer. This client library allows operations like remote browsing of the file system on a Aspera server, copy/move files on the server file system, and retreiving MD5 sums for files on the server etc. This library is available at:
+
+http://developer.asperasoft.com/supporting/command-client.html
+
+Pre & Post Transfer Processing Calls
+
+For the lighter integration needs, you may want to peruse the documentation on the post-processing capability available throughout our software. This is the mechanism that automatically fires registered custom shell scripts (any) upon file and session start, stop, and error, passing in the attributes from the transfer to use within the triggered script as environment for tailoring the action. This is the mechanism that has been used by other Aspera customers to automatically move files after successful upload to a folder monitored by a transcoding software (e.g Flip Factory), or to invoke subsequent transfers to move uploaded files to another host. Documentation is available at
+
+http://developer.asperasoft.com/supporting/index.html
+
+
+Logging/Database Access
+
+Lastly, all Aspera server software logs all file and transfer session events to an SQL database if configured to do so. Usage reports are generated on the database by our Console application, or you can query it directly using standard SQL. The schema is documented at
+
+http://developer.asperasoft.com/supporting/index.html
+
+
+
+Regards,
+
+John
+
+John Dubrawski
+Sales Director, Southwest Region
+
+Aspera, Inc.
+5900 Hollis Street, Suite E
+Emeryville, CA 94608
+United States
+jdubrawski@asperasoft.com
+
+
+T +1 (310) 227-6224 
+
+Moving the world’s digital assets at maximum speed.
+any size. any distance. any network.
+Explore high-performance file transfer solutions at www.asperasoft.com
+
+
+Experience our latest innovations at NAB2011. Booth SL9620. April 11-14 in Las Vegas.
+Through April 7th, get free entry to NAB courtesy of Aspera by using VIP pass code LV0613 on the show registration page
+
+ 
