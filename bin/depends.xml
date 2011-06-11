@@ -1,3 +1,0 @@
-<plugin projectname="entermedia-aspera">
-	<depend>entermedia-server</depend>
-</plugin>
