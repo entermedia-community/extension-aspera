@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project basedir="." default="default" name="entermedia-aspera">
+<project basedir="." default="default" name="extension-aspera">
 
   <target name="default" depends="clean, source, update-dependencies, compile,  jar, javadoc, zip, publish"/>
   <target name="dependency" depends="default"/>
