@@ -48,10 +48,17 @@
 	</target>
 
 	<target name="update-dependencies" depends="clean">
+<<<<<<< HEAD
 		<mkdir dir="${build}" />
 		<mkdir dir="${wardir}/WEB-INF/" />
 		<get dest="${build}/install.xml" src="http://dev.entermediasoftware.com/projects/entermedia-server/install.xml" />
 		<ant antfile="${build}/install.xml" inheritAll="false" dir="${wardir}/WEB-INF/" target="default" />
+=======
+	    <mkdir dir="${build}"/>
+	    <mkdir dir="${wardir}/WEB-INF/" />
+		<get dest="${build}/install.xml" src="http://dev.entermediasoftware.com/jenkins/job/entermedia-server/lastSuccessfulBuild/artifact/deploy/install.xml"/>
+		<ant antfile="${build}/install.xml" inheritAll="false" dir="${wardir}/WEB-INF/" target="default"/> 
+>>>>>>> 86d110654ea32c0d75f67de472ff45abe0c6247d
 	</target>
 
 	<target name="compile" depends="clean">
