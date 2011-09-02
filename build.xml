@@ -35,9 +35,9 @@
 	<property name="versionedApp" value="${appname}-${version}" />
 
 	<target name="init">
-		<mkdir dir="${base}"/>
+		<mkdir dir="${base}" />
 	</target>
-		
+
 	<target name="clean" depends="init">
 		<delete dir="${build}" />
 	</target>
@@ -48,17 +48,10 @@
 	</target>
 
 	<target name="update-dependencies" depends="clean">
-<<<<<<< HEAD
 		<mkdir dir="${build}" />
 		<mkdir dir="${wardir}/WEB-INF/" />
 		<get dest="${build}/install.xml" src="http://dev.entermediasoftware.com/projects/entermedia-server/install.xml" />
 		<ant antfile="${build}/install.xml" inheritAll="false" dir="${wardir}/WEB-INF/" target="default" />
-=======
-	    <mkdir dir="${build}"/>
-	    <mkdir dir="${wardir}/WEB-INF/" />
-		<get dest="${build}/install.xml" src="http://dev.entermediasoftware.com/jenkins/job/entermedia-server/lastSuccessfulBuild/artifact/deploy/install.xml"/>
-		<ant antfile="${build}/install.xml" inheritAll="false" dir="${wardir}/WEB-INF/" target="default"/> 
->>>>>>> 86d110654ea32c0d75f67de472ff45abe0c6247d
 	</target>
 
 	<target name="compile" depends="clean">
@@ -173,7 +166,7 @@
 	<target name="publish" depends="javadoc, zip">
 
 		<!-- publish results to anthill -->
-		<copy file="${deployDir}/builds/entermedia-aspera.zip" overwrite="true" tofile="${deployDir}/entermedia-aspera.zip" />
+		<copy file="${deployDir}/builds/${appname}.zip" overwrite="true" tofile="${deployDir}/${appname}.zip" />
 
 
 		<copy file="${etc}/install.js" overwrite="true" tofile="${deployDir}/install.js" />
