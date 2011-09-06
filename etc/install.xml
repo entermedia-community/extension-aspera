@@ -36,13 +36,13 @@
 	<target name="update-dependencies" depends="clean">
 		<mkdir dir="${build}"/>
 
-		<get src="http://dev.entermediasoftware.com/jenkins/job/entermedia-aspera/lastSuccessfulBuild/artifact/deploy/entermedia-aspera.zip" dest="${build}/entermedia-aspera.zip" />	
+		<get src="http://dev.entermediasoftware.com/jenkins/job/extension-aspera/lastSuccessfulBuild/artifact/deploy/extension-aspera.zip" dest="${build}/extension-aspera.zip" />	
 	  
   </target>
     
   <target name="unzip">
   	<mkdir dir="${build}/unpacked"/>
-    <unzip dest="${build}/unpacked" src="${build}/entermedia-aspera.zip" />
+    <unzip dest="${build}/unpacked" src="${build}/extension-aspera.zip" />
   </target>
   
 	
