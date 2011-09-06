@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project basedir="." default="default" name="upgrade">
+<project basedir="." default="default" name="extension-aspera">
 
   <target name="default" depends="clean, update-dependencies, unzip, upgrade"/>
    
@@ -36,7 +36,7 @@
 	<target name="update-dependencies" depends="clean">
 		<mkdir dir="${build}"/>
 
-		<get src="http://dev.entermediasoftware.com/jenkins/job/extension-aspera/lastSuccessfulBuild/artifact/deploy/extension-aspera.zip" dest="${build}/extension-aspera.zip" />	
+		<get src="http://dev.entermediasoftware.com/jenkins/job/${appname}/lastSuccessfulBuild/artifact/deploy/${appname}.zip" dest="${build}/${appname}.zip" />	
 	  
   </target>
     
@@ -49,14 +49,14 @@
   <target name="upgrade">
   	<echo>Delete old libs</echo>
     <delete>
-      <fileset dir="./lib" includes="entermedia-aspera**.jar"/>
+      <fileset dir="./lib" includes="${appname}**.jar"/>
     </delete>
     <delete>
       <fileset dir="./lib" includes="aspera**.jar"/>
     </delete>
   	
     <copy todir="./lib" overwrite="false" preservelastmodified="true">
-      <fileset file="${build}/unpacked/lib/entermedia-aspera*.jar"/>
+      <fileset file="${build}/unpacked/lib/${appname}*.jar"/>
     </copy>
     <copy todir="./lib" overwrite="false" preservelastmodified="true">
       <fileset file="${build}/unpacked/lib/aspera**.jar"/>
