@@ -171,6 +171,8 @@
 
 		<copy file="${etc}/install.js" overwrite="true" tofile="${deployDir}/install.js" />
 
+		<copy file="${etc}/install.xml" overwrite="true" tofile="${deployDir}/install.xml" />
+
 
 	</target>
 
