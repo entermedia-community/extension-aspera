@@ -75,10 +75,17 @@
 		<copy todir="../WEB-INF/bin/linux/aspera" preservelastmodified="true">
 			<fileset dir="${build}/unpacked/bin/linux/aspera" />
 		</copy>
-		
+
 		<copy todir="../WEB-INF/bin/windows/aspera" preservelastmodified="true">
 			<fileset dir="${build}/unpacked/bin/windows/aspera" />
 		</copy>
+
+		<chmod perm="755">
+			<fileset dir="../WEB-INF/bin/linux/aspera" />
+		</chmod>
+		<chmod perm="755">
+			<fileset dir="../WEB-INF/bin/windows/aspera" />
+		</chmod>
 
 		<delete dir="${build}" />
 
