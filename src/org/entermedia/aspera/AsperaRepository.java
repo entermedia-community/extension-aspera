@@ -84,8 +84,8 @@ public class AsperaRepository extends BaseRepository
 			CmdClient client =  new CmdClient();
 			client.setConnectionTimeout(10000);
 			client.setCommandTimeout(12000);
-            User user = getUserManager().getUser(getUserName());
-            String pw = getUserManager().decryptPassword(user);
+            User user = getUserForUserName();
+            String pw = getDecryptedPassword(user);
             try
             {
             	client.connect(getServer(), getUserName(), pw, getPort());
@@ -99,11 +99,20 @@ public class AsperaRepository extends BaseRepository
             }
             catch( Exception ex)
             {
+            	log.error("failed to connect to aspera with: " + getServer() + ", " + getUserName() + ", " + getPort());
             	throw new OpenEditException(ex);
             }
 		}
 
 		return fieldCmdClient;
+	}
+
+	protected User getUserForUserName() {
+		return getUserManager().getUser(getUserName());
+	}
+
+	protected String getDecryptedPassword(User user) {
+		return getUserManager().decryptPassword(user);
 	}
 
 	public void setCmdClient(CmdClient inCmdClient)
@@ -178,8 +187,8 @@ public class AsperaRepository extends BaseRepository
 		command.add(inContent.getAbsolutePath());
 		command.add(destination);
 		command.add(getUserName());
-		User user = getUserManager().getUser(getUserName());
-        String pw = getUserManager().decryptPassword(user);
+		User user = getUserForUserName();
+        String pw = getDecryptedPassword(user);
 		command.add(pw);
 		command.add(getServer());
 		ExecResult result = getExec().runExec("asperaupload", command, true);
