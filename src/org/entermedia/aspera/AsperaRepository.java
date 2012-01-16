@@ -166,6 +166,7 @@ public class AsperaRepository extends BaseRepository
 		String dir = PathUtilities.extractDirectoryPath(destination);
 		try
 		{
+			log.info("getCmdClient().execMkdir("+dir+");"); //TODO: Check file size
 			getCmdClient().execMkdir(dir);
 		}
 		catch (Exception e)
