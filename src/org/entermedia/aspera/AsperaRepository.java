@@ -84,10 +84,10 @@ public class AsperaRepository extends BaseRepository
 			CmdClient client =  new CmdClient();
 			client.setConnectionTimeout(10000);
 			client.setCommandTimeout(12000);
-            User user = getUserForUserName();
-            String pw = getDecryptedPassword(user);
             try
             {
+            	User user = getUserForUserName();
+            	String pw = getDecryptedPassword(user);
             	client.connect(getServer(), getUserName(), pw, getPort());
 	             
 	            if (client.isConnected()) {
@@ -166,12 +166,6 @@ public class AsperaRepository extends BaseRepository
 		String dir = PathUtilities.extractDirectoryPath(destination);
 		try
 		{
-//			String[] parts = dir.substring(1).split("/");
-//			String complete = "";
-//			for (int i = 0; i < parts.length; i++)
-//			{
-//				complete = complete + "/" + parts[i];
-			//getCmdClient().execRm(dir);
 			getCmdClient().execMkdir(dir);
 		}
 		catch (Exception e)
