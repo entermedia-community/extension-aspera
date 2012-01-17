@@ -163,6 +163,8 @@ public class AsperaRepository extends BaseRepository
 			log.info("File already exists"); //TODO: Check file size
 			return;
 		}
+		log.error("AsperaRepository.put: " + destination);
+		System.out.println("AsperaRepository.put: " + destination);
 		String dir = PathUtilities.extractDirectoryPath(destination);
 		try
 		{
